@@ -1,3 +1,3 @@
 #!/bin/bash
-mv -r [[:upper:]]* /tmp/u
+mv [[:upper:]]* /tmp/u
 
