@@ -1,0 +1,1 @@
+*This directory contain project of 0x01-shell_permissions*
