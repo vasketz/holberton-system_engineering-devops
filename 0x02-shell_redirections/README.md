@@ -1,0 +1,1 @@
+*directory contains project of shell redirections*
