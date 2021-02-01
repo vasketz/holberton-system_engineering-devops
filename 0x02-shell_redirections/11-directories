@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ad | wc -l
+find /holberton-system_engineering-devops/0x02-shell_redirections | wc -l
