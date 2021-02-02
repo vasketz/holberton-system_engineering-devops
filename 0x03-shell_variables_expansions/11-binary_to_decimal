@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $((16#33))
+echo $((2#$BINARY))
