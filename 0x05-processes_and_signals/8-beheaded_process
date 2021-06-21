@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This script kill a process
+# shellcheck disable=SC2009
+ps -ef | grep ./7-highlander | grep -v grep | awk '{print $2}' | xargs kill -9
