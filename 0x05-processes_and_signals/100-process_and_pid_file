@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #this is the advance task 100 read and cut
 echo $$ > /var/run/holbertonscript.pid
-trap 'echo I hate the kill command; sudo rm /var/run/hobertonscript.pid' SIGTERM
+trap 'echo I hate the kill command && sudo rm /var/run/hobertonscript.pid' SIGTERM
 trap 'echo Y U no love me?!' SIGINT
 while true
 do
