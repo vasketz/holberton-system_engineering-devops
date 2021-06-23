@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-#this is the advance task 100 read and cut
+# Creates the file /var/run/holbertonscript.pid containing its PID
 echo $$ > /var/run/holbertonscript.pid
-trap 'echo I hate the kill command && sudo rm /var/run/hobertonscript.pid' SIGTERM
-trap 'echo Y U no love me?!' SIGINT
-while :
+trap "echo I hate the kill command && sudo rm /var/run/holbertonscript.pid " SIGTERM
+trap "echo Y U no love me?!" SIGINT
+while true
 do
-    echo "To infinity and beyond"
+	echo "To infinity and beyond"
 done
