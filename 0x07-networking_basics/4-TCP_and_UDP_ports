@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+#this script shows the net status server an listening ports
 sudo netstat -lp
