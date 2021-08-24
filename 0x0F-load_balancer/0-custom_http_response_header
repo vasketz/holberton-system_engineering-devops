@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Configure Nginx so that its HTTP response contains a custom header
 sudo apt-get update
-sudo apt-get install nginx
-sudo echo "Holberton School" | sudo tee /var/www/html/index.htmlt-get update
+sudo apt-get -y install nginx
+sudo echo "Holberton School" | sudo tee /var/www/html/index.html
 sudo sed -i "25 i add_header X-Served-By \$hostname;" /etc/nginx/sites-available/default
 sudo service nginx restart
