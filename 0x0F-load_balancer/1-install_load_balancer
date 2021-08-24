@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configure HAproxy so that it send traffic to web-01 and web-02
+sudo apt -y update
+sudo apt install -y haproxy
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy_original
+sudo sed -i "$ a frontend http_front\n\tbind *:80\n\tmode http\n\tdefault_backend http_back\n\nbackend http_back\n\tbalance roundrobin\n\tserver 2842-web-01 34.74.231.67:80 check\n\tserver 2842-web-02 54.172.241.181:80 check" /etc/haproxy/haproxy.cfg
+sudo cp /etc/default/haproxy /etc/default/haproxy_original
+sudo sed -i "$ a ENABLED=1" /etc/default/haproxy
+sudo service haproxy start
