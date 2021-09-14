@@ -9,7 +9,6 @@ import requests
 from sys import argv
 
 
-
 if __name__ == "__main__":
     users = "https://jsonplaceholder.typicode.com/users/"\
             + argv[1]
