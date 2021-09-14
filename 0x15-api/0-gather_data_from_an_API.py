@@ -14,7 +14,7 @@ if __name__ == "__main__":
     rsp = requests.get(
         "https://jsonplaceholder.typicode.com/users/{}".format(id))
     rsp2 = requests.get(
-        "https://jsonplaceholder.typicode.com/todos")
+        "https://jsonplaceholder.typicode.com/todos/{}".format(id))
 
     name = rsp.json()["name"]
 
