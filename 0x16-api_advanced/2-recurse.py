@@ -15,11 +15,11 @@ def recurse(subreddit, hot_list=[], after="None"):
                        params={"after": after})
     if after is None:
         return hot_list
-    elif rsp.status_code == 200:
+    if rsp.status_code == 200:
         for element in rsp.json().get("data").get("children"):
             hot_list.append(element.get("data").get("title"))
         after = rsp.json().get("data").get("after")
         recurse(subreddit, hot_list, after=after)
-    elif after is None:
-        return
+    else:
+        return None
     return hot_list
