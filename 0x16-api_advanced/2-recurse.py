@@ -20,6 +20,6 @@ def recurse(subreddit, hot_list=[], after="None"):
             hot_list.append(element.get("data").get("title"))
         after = rsp.json().get("data").get("after")
         recurse(subreddit, hot_list, after=after)
-    else:
-        return ("None")
+    elif after is None:
+        return
     return hot_list
